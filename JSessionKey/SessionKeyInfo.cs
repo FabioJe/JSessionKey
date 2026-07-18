@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using static JSessionKey.Base64Coder;
 using static JSessionKey.DateTimeConverter;
 
@@ -62,14 +57,14 @@ namespace JSessionKey
         }
 
         public string Signature { get; }
-        public DateTime ValidUntil { get; }
+        public DateTimeOffset ValidUntil { get; }
         public string Key { get; }
 
         public string GetBaseKey() => baseKeyBuilder.Build();
 
         public bool IsValid()
         {
-            if (ValidUntil < DateTime.UtcNow) return false;
+            if (ValidUntil < DateTimeOffset.UtcNow) return false;
             var calcSig = sessionService.GetSignature(GetBaseKey());
             return calcSig == Signature;
         }

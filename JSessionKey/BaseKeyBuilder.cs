@@ -22,6 +22,7 @@ namespace JSessionKey
             else payloadValue = Base64Coder.ToBase64String(JsonSerializer.Serialize(payload));
             return this;
         }
+
         public BaseKeyBuilder<T> SetPayloadAsBase64Text(string payload)
         {
             payloadValue = payload;
@@ -39,7 +40,7 @@ namespace JSessionKey
             this.sessiontype = sessiontype;
             return this;
         }
-        public BaseKeyBuilder<T> SetValidUntil(DateTime validUntil)
+        public BaseKeyBuilder<T> SetValidUntil(DateTimeOffset validUntil)
         {
             this.validUntil = DateTimeConverter.GetKeyTimeString(validUntil);
             return this;

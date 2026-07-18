@@ -11,7 +11,7 @@ namespace JSessionKey
         string PayloadValue { get; }
         ushort SessionType { get; }
         string Signature { get; }
-        DateTime ValidUntil { get; }
+        DateTimeOffset ValidUntil { get; }
 
         string GetBaseKey();
         ConcurrentDictionary<string, string> GetHeaderObject();

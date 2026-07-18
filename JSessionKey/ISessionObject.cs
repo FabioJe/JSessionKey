@@ -7,7 +7,7 @@ namespace JSessionKey
     {
         T? Payload { get; set; }
         ushort SessionType { get; set; }
-        DateTime? ValidUntil { get; set; }
+        DateTimeOffset? ValidUntil { get; set; }
 
         string BuildSessionKey();
         string GetHeader(string header);

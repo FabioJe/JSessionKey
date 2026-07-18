@@ -31,7 +31,7 @@ namespace JSessionKey
 
         public T? Payload { get; set; }
 
-        public DateTime? ValidUntil { get; set; }
+        public DateTimeOffset? ValidUntil { get; set; }
 
 
         public string BuildSessionKey()

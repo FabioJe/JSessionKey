@@ -12,12 +12,12 @@ namespace JSessionKey
 
         private const string TIME_FORMAT = "yyyyMMddHHmm";
 
-        public static string GetKeyTimeString(DateTime dateTime) => dateTime.ToUniversalTime().ToString(TIME_FORMAT);
+        public static string GetKeyTimeString(DateTimeOffset dateTime) => dateTime.ToUniversalTime().ToString(TIME_FORMAT);
 
-        public static DateTime FromKeyTimeString(string keyTimeString)
+        public static DateTimeOffset FromKeyTimeString(string keyTimeString)
         {
-            var dt = DateTime.ParseExact(keyTimeString, TIME_FORMAT, CultureInfo.InvariantCulture);
-            return DateTime.SpecifyKind(dt, DateTimeKind.Utc);
+            var dt = DateTimeOffset.ParseExact(keyTimeString, TIME_FORMAT, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
+            return dt;
         }
     }
 }
