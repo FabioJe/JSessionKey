@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+		<TargetFrameworks>net10.0;net11.0</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>JSessionKey</Title>
@@ -12,10 +12,10 @@
 		<RepositoryUrl>https://github.com/FabioJe/JSessionKey</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/FabioJe/JSessionKey</PackageProjectUrl>
 		<Description>JSessionKey is a system similar to JWT tokens that provides authentication tokens in distributed systems.</Description>
-		<PackageVersion>1.0.1.0</PackageVersion>
-		<FileVersion>1.0.1.0</FileVersion>
-		<Version>1.0.1.0</Version>
-		<AssemblyVersion>1.0.1.0</AssemblyVersion>
+		<PackageVersion>1.0.2.0</PackageVersion>
+		<FileVersion>1.0.2.0</FileVersion>
+		<Version>1.0.2.0</Version>
+		<AssemblyVersion>1.0.2.0</AssemblyVersion>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 

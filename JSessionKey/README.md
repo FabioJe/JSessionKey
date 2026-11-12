@@ -2,7 +2,7 @@
 
 JSessionKey is a system similar to JWT tokens that provides authentication tokens in distributed systems. 
 
-#### Requires .NET 8 or higher
+#### Requires .NET 10 or higher
 
 ### How to use?
 
